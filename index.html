@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/style.css">	
+
+
+	<title>My Weather App</title>
+</head>
+<body id="body" >
+
+  <main class="weather">
+ <div class="container">
+	
+   <h1 class="heading">Your Weather Forcast</h1>
+
+      <input type="text" placeholder="Zip Code" id="new-location">
+      <button id="change-location">SUBMIT</button>
+    <h2 id="conditions"></h2>
+  </div>
+
+  
+</main>
+
+<!--<section class="icons">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+      <span class="msg"></span>
+    <ul class="cities"></ul>
+  </div>
+  <div class="col-sm-2">
+  <p class="catchPhrase">
+    Whether the weather be cold, or whether the weather be hot;
+    Whether the weather be fine, or whether the weather be not,
+    We'll weather the weather whatever the weather,
+    Whether we like it or not.
+    ~Cardiff Camera Club, c.1921</p>
+  </div>
+  </div>
+</div>
+</section>-->
+	
+	<script>
+		//calling get weather funtion
+        getWeather(80014);
+
+        document.getElementById("change-location").addEventListener('click', function() {
+         getWeather(document.getElementById("new-location").value);
+        });
+
+      //creating function with paramenter of zipcode
+		function getWeather(zipcode) {
+
+			var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function(event) {
+            
+              let response = JSON.parse(event.currentTarget.response);
+              console.log(response);
+
+              let output = document.getElementById("conditions");
+              output.innerText = response.name + " is currently " + response.weather[0].main + " and " + Math.ceil(response.main.temp) + " degrees.";
+
+              if (response.weather[0].main == 'Clouds') {
+              	document.getElementById("body").classList.add('cloudy');
+              }
+              if (response.weather[0].main == 'Clear')	{
+                document.getElementById("body").classList.add('clear');
+              }
+              if (response.weather[0].main == 'Rain') {
+              	document.getElementById("body").classList.add('rain');
+              }
+              if (response.weather[0].main == 'Snow') {
+              	document.getElementById("body").classList.add('snow');
+              }
+
+
+            });
+
+            oReq.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zipcode +",us&appid=ccef2c8c8034982955bec1e0b2a83e36&units=imperial");
+            oReq.send();
+            }
+
+               
+
+              
+              
+
+	
+
+
+
+  
+      
+          
+
+		
+
+	</script>
+
+</body>
+</html>
