@@ -41,6 +41,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  height: 250px;
 }
 
 
@@ -49,6 +50,7 @@ body {
 .weather {
   color: #caf0f8;
   border: 2px solid;
+  background-color: #0096c7;
 }
 
 .heading {
@@ -56,6 +58,8 @@ body {
   font-size: 4rem;
   letter-spacing: 0.02em;
   padding: 0 0 30px 0;
+  width: 75%;
+  display: inline-block;
 }
 
 /*.weather form {
@@ -99,14 +103,15 @@ body {
 }
 
 
-.col-sm-2 {
+.catchPhrase {
   float: right;
-  width: fit-content;
+  width: 250px;
   block-size: fit-content;
   border: 2px solid;
   background-color: #03045e;
   color: #caf0f8;
   padding: 10px;
+  margin-top: 30px;
 }
 
 .cloudy{
@@ -124,6 +129,8 @@ body {
 .sun{
   background: url(https://images.unsplash.com/photo-1462524500090-89443873e2b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
 }
+
+
 
 /*cloudy skys https://images.unsplash.com/photo-1609931029519-b0c58e5f69c0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTUxfHxzdW5ueSUyMHNreXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60
 /*rain https://images.unsplash.com/photo-1523907148451-986fa7602675?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjV8fHJhaW5pbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60
