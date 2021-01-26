@@ -14,7 +14,7 @@
 
   <main class="weather">
  <div class="container">
-	
+  
    <h1 class="heading">Your Weather Forcast</h1>
 
      <p class="catchPhrase">
@@ -27,7 +27,6 @@
       <input type="text" placeholder="Zip Code" id="new-location">
       <button id="change-location">SUBMIT</button>
      
-       <h2 id="conditions" ></h2>
      <div class="weatherDisplay">
       <div id="city"></div>
       <div class="icon">
@@ -35,21 +34,12 @@
       </div>
       <div id="temp"></div>
 
-</div>
+   </div>
+
   </div>
 
   
 </main>
-
-<!--<section class="icons">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10">
-      <span class="msg"></span>
-    <ul class="cities"></ul>
-  </div>
-  
-</section>-->
 	
 	<script>
 
@@ -79,7 +69,7 @@
                //output.innerText = response.name + " is currently " + Math.ceil(response.main.temp) + "° with " + response.weather[0].main + ". The high today will be " + Math.ceil(response.main.temp_max) + "°.";
                city.innerHTML = response.name + " is " + response.weather[0].main;
                icon.src = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
-               temp.innerHTML = "Current Temperature " + Math.ceil(response.main.temp) +"° " + "/ High Today " + Math.ceil(response.main.temp_max) + "•";
+               temp.innerHTML = "Current Temperature " + Math.ceil(response.main.temp) +"° " + "/ High Today " + Math.ceil(response.main.temp_max) + "°";
 
 
 

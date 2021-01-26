@@ -1,12 +1,6 @@
 
 
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 button {
   cursor: pointer;
 }
@@ -18,19 +12,8 @@ input {
   border: 2px solid #03045e;
 }
 
-/*img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-*/
-ul {
-  list-style: none;
-}
-
 body {
   font-family: 'Cuprum', sans-se;  
-  font: 1rem/1.3 "Roboto", sans-serif;
   background: #0096c7;
   color: var(--text_dark);
   padding: 50px;
@@ -41,12 +24,36 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 250px;
+  height: 365px;
 }
 
+.weatherDisplay {
+  width: fit-content;
+  border: 2px solid;
+  margin-top: 25;
+  background-color: #fff1ad;
+  border-radius: 25px;
+  color: #03045e; 
+}
 
-/* SECTION #1
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#city {
+  font-size: 25px;
+  margin-left: 20px;
+  padding: 5px;
+
+}
+
+img {
+  margin-left: 85;
+  padding: 5px;
+  width: 100;
+  height: 100;
+}
+
+#temp {
+  padding: 5px;
+}
+
 .weather {
   color: #caf0f8;
   border: 2px solid;
@@ -62,11 +69,6 @@ body {
   display: inline-block;
 }
 
-/*.weather form {
-  position: relative;
-  display: flex;
-  align-items: center;
-}*/
 
 .weather form input {
   font-size: 25px;
@@ -94,7 +96,7 @@ body {
   background: var(--darkred);
 }
 
-.weather form .msg {
+.weather form  {
   position: absolute;
   bottom: -40px;
   left: 0;
